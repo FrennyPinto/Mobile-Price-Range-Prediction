@@ -48,7 +48,7 @@ MobileData = pd.read_csv(r"C:\Users\Frenn\Desktop\UE\Data Engineering\Project\tr
 
 user = 'root' #userid
 db = 'mobile_db' # databasename
-pw = 'Frekey01$' #password
+pw = 'password' #password
 
 engine = create_engine(f"mysql+pymysql://{user}:{pw}@localhost/{db}")
 MobileData.to_sql('mobile_table', con = engine, if_exists = 'replace', chunksize = 1000 , index = False) #.lower() is optional
